@@ -220,9 +220,11 @@ button{
 	border: 1px solid #D7D7D7;
     background-color: #f8f8f8;
     color: rgb(49, 44, 44);
+	
 }
 
 .button-type-primary{
+	border: 1px solid #1AAD19;
 	border: 1px solid #1AAD19;
     background-color: #1AAD19;
     color: white;
@@ -278,6 +280,9 @@ button{
 	padding-right: 1px;
 }
 
+.button-attr-disabled{
+	opacity:0.4;
+}
 
 
 /*
@@ -475,6 +480,16 @@ input[type=range]::-webkit-slider-thumb {
 .navigator{
 	display: inline-block;
 }
+
+
+
+/**********************************
+**								  *
+**			媒体组件	  		   *
+**								  *
+***********************************
+*/
+
 
 
 
