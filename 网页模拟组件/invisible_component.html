@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>不可见组件</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<!--
+	不可见组件大多是直接对应封装：
+	表单组件：
+		form、
+		label、
+	视图组件：
+		view
+	基本内容：
+		text(特性：除了文本节点以外的其他节点都无法长按选中。)
+		rich-text(富文本：为了能在小程序中解析html的标签和属性，复杂)
+	导航：
+		navigator(重点在对属性的解析，后端解析需注意！)
+		
+  -->
+
+<body>
+	<div class="form">
+		<form></form>
+	</div>
+	
+	<div class="label">
+		<label></label>
+	</div>
+	
+	<div class="view">
+		<div></div>
+	</div>
+	
+	<div class="text">
+		<span></span>
+	</div>
+	
+	<div class="rich-text">
+	<!--	实现待商榷	-->
+	</div>
+	
+	<div clas="navigator">
+		<div></div>  <!-- display:block-->
+	</div>
+	
+</body>
+</html>

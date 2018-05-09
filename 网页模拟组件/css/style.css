@@ -1,0 +1,482 @@
+
+/*
+	组件展示面板
+*/
+.panel{
+    margin: auto;
+    width: 800px;
+    height: 400px;
+    background: rgb(245, 240, 231);
+	text-align: center;
+	padding-top: 50px;
+}
+
+/*
+设计规范：
+	1. 所有封装的组件的外层包裹一个div, class='组件名'，css只有一个属性：display:inline. （方便后端解析） 
+	2. 为了模拟微信小程序的组件而设置的css, class='组件名-like'.
+	3. 为了模拟微信小程序的组件属性而设置的css，class='组件名-属性名-属性值'
+	3. 不是class的css忽略上述命名
+*/
+
+
+
+/*
+注意事项：
+	1.所有封装的组件的外层div都要设置：display: inline-block（即消除div的影响）
+
+*/
+
+
+
+/* 组件分类：
+	视图容器
+	基础内容
+	表单组件
+	导航
+	媒体组件
+	地图
+	画布
+	(开放能力、客服会话)
+*/
+
+
+/**********************************
+**								  *
+**			视图容器	  		   *
+**								  *
+***********************************
+*/
+
+/*
+	view属性
+*/
+.view{
+	display: inline-block;
+}
+
+
+
+
+/**********************************
+**								  *
+**			基本内容	  		   *
+**								  *
+***********************************
+*/
+
+/*
+	text属性
+*/
+.text{
+	display: inline-block;
+}
+
+/*
+	rich-text属性
+*/
+.rich-text{
+	display: inline;
+}
+
+/*
+	progress属性
+*/
+.progress{
+	display: inline-block;
+}
+
+/*progress-like是底层，span是填充层，height要一致*/
+.progress-like{
+	height: 12px;
+	background: #ebebeb;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+}
+
+.progress-like > span{
+	position: relative;
+	float: left;
+	margin: 0 -1px;
+	min-width: 30px;
+	height: 12px;
+	text-align: right;
+	background: #1AAD19;
+}
+
+
+
+/*
+	icon组件属性
+*/
+.icon{
+	display: inline-block;
+}
+
+.icon-like-common{
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+	/* 这四个属性相关的，同时相应改变 */
+	width:22px;
+	height: 22px;
+	font-size: 14px;
+	border-radius: 15px;
+	border: 0.5px solid;
+}
+
+.icon-like-special{
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+	/*响应尺寸改变*/
+	font-size: 23px;
+}
+
+
+
+.icon-type-success{
+	background-color: #1AAD19;
+	border-color: #1AAD19;
+	color: #ffffff;
+	
+}
+
+.icon-type-success_no_circle{
+	color: #1AAD19;
+}
+
+.icon-type-info{
+	background-color: #10AEFF;
+	border-color: #10AEFF;
+	color: #ffffff;
+}
+
+.icon-type-warn{
+	background-color: #F76260;
+	border-color: #F76260;
+	color: #ffffff;
+}
+
+.icon-type-waiting{
+	background-color: #10AEFF;
+	border-color: #10AEFF;
+	color: #ffffff;
+}
+
+.icon-type-cancel{
+	background-color: #ffffff;
+	color: #F76260;
+	border-color: #F76260;
+}
+
+.icon-type-download{
+	background-color: #1AAD19;
+	border-color: #1AAD19;
+	color: #ffffff;
+}
+
+.icon-type-search{
+	color: #B2B2B2;
+}
+
+.icon-type-clear{
+	background-color: #B2B2B2;
+	border-color: #B2B2B2;
+	color: #ffffff;
+}
+
+
+
+/**********************************
+**								  *
+**			表单组件	  		   *
+**								  *
+***********************************
+*/
+
+
+/*
+    button属性
+*/
+
+/*button共用属性*/
+button{
+
+	border-radius:5px;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+    cursor: pointer;
+}
+
+.button{
+	display: inline-block;
+}
+
+.button-type-default{
+	border: 1px solid #D7D7D7;
+    background-color: #f8f8f8;
+    color: rgb(49, 44, 44);
+}
+
+.button-type-primary{
+	border: 1px solid #1AAD19;
+    background-color: #1AAD19;
+    color: white;
+}
+
+.button-type-warn{
+	border: 1px solid #E64340;
+    background-color: #E64340;
+    color: white;
+}
+
+.button-size-default{
+    min-width:65px;
+    min-height:43px;
+    font-size: 18px;
+    padding-left: 12px; 
+    padding-right: 12px;
+}
+
+.button-size-mini{
+    min-width:65px;
+    min-height:30px;
+    font-size: 14px;
+    padding-left: 12px; 
+    padding-right: 12px;
+	
+}
+
+.button-attr-primary-plain{
+	background-color: white !important;
+	color: #1AAD19 !important;
+}
+
+.button-attr-default-plain{
+	background-color: white !important;
+	color: rgb(49, 44, 44) !important;
+	border-color: rgb(49, 44, 44) !important;
+}
+
+.button-attr-warn-plain{
+	background-color: white !important;
+	color: #E64340 !important;
+	
+}
+
+.button-attr-loading-default{
+	height: 15px;
+	padding-right: 3px;
+}
+
+.button-attr-loading-mini{
+	height: 10px;
+	padding-right: 1px;
+}
+
+
+
+/*
+	checkbox属性
+*/
+
+.checkbox{
+	display: inline-block;
+}
+
+.checkbox input:checked + label {
+    color: #1AAD19;
+}
+
+.checkbox-like {
+	cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #E8E8E8;
+    padding: 1px 6px;
+    border-radius: 3px;
+    vertical-align: middle;
+	text-align:center;
+	color:#ffffff;
+}
+
+/*
+	radio属性
+*/
+.radio{
+	display: inline-block;
+}
+
+.radio input:checked + label {
+    background-color: #1AAD19;
+	border: none;
+}
+
+.radio-like {
+	cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #E8E8E8;
+	padding: 0 5px;
+    border-radius: 30px;
+    vertical-align: middle;
+	text-align:center;
+	color:#ffffff;
+}
+
+
+
+/*
+	slider封装属性
+*/
+.slider{
+	display: inline-block;
+}
+
+/*去除系统默认的样式*/
+input[type=range] {
+	-webkit-appearance: none;
+	width: 300px;
+	border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+	background: -webkit-linear-gradient(#1AAD19, #1AAD19) no-repeat;
+	background-size: 0% 100%;
+}
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}    
+
+/* 给滑动轨道添加样式*/
+input[type=range]::-webkit-slider-runnable-track {
+	height: 3px;
+	border-radius: 10px; /*将轨道设为圆角的*/
+	box-shadow: 0 0.5px 0.5px #def3f8, inset 0 .1em .1em #E1DDDD;
+}
+/*去掉聚焦时的border展示*/
+input[type=range]:focus {
+	outline: none;
+}
+
+/* 给滑块添加样式*/
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 30px;
+	width: 30px;
+	margin-top: -14px; /*使滑块超出轨道部分的偏移量相等*/
+	background: #ffffff; 
+	border-radius: 50%; /*外观设置为圆形*/
+	border: solid 1px #E1DDDD; /*设置边框*/
+	box-shadow: 1px 1px 2px #CCC8C8; /*添加底部阴影*/
+}
+
+
+/*
+	switch封装属性
+*/
+
+/* */
+.switch{
+	display: inline-block;
+}
+
+.switch-like {
+	width: 52px;
+	height: 31px;
+	position: relative;
+	border: 1px solid #dfdfdf;
+	background-color: #fdfdfd;
+	box-shadow: #dfdfdf 0 0 0 0 inset;
+	border-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background-clip: content-box;
+	display: inline-block;
+	-webkit-appearance: none;
+	user-select: none;
+	outline: none; 
+	/*过渡效果*/
+	transition: background-color ease 0.4s; 
+}
+.switch-like:before {
+	content: '';
+	width: 29px;
+	height: 29px;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	border-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
+	/*过渡效果*/
+	transition: left 0.3s; 
+}
+.switch-like:checked {
+	border-color: #64bd63;
+	box-shadow: #64bd63 0 0 0 16px inset;
+	background-color: #64bd63; 
+	/*过渡效果*/
+	box-shadow: #dfdfdf 0 0 0 0 inset;
+	background-color: #64bd63;
+	transition: border-color 0.4s, background-color ease 0.4s; 
+}
+.switch-like:checked:before {
+	left: 21px;
+	/*过渡效果*/
+	transition: left 0.3s; 
+}
+
+/*
+	input属性
+*/
+.input{
+	display: inline-block;
+}
+
+.input-like{
+	border: none;
+	outline: none; 
+}
+
+/*
+	form属性
+*/
+.form{
+	display: inline-block;
+}
+
+
+/*
+	label属性
+*/
+.label{
+	display: inline-block;
+}
+
+
+
+/**********************************
+**								  *
+**		   导航、地图、画布	     	 *
+**								  *
+***********************************
+*/
+
+/*
+	navigator属性
+*/
+
+.navigator{
+	display: inline-block;
+}
+
+
+
+
+

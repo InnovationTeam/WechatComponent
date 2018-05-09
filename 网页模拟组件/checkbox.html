@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>checkbox</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<!--
+	1. 模拟checkbox标签需要给每个checkbox定义一个id，绑定label.
+	怎么动态定义？
+	2. 在微信小程序中checkbox需要checkbox-group包裹着，没有的话会影响performance，解析微信小程序代码时需要注意。
+-->
+
+<body>
+	<div class="panel">
+		<div class="checkbox">
+			<input type="checkbox" id="checkbox-1" style="display: none;">
+			<label for="checkbox-1" class="checkbox-like">✔</label>
+			<span>标签一</span>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="checkbox-2" style="display: none;">
+			<label for="checkbox-2" class="checkbox-like">✔</label>
+			<span>标签二</span>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="checkbox-3" style="display: none;">
+			<label for="checkbox-3" class="checkbox-like">✔</label>
+			<span>标签三</span>
+		</div>
+
+	</div>
+
+
+</body>
+</html>

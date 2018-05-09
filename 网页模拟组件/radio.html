@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>radio</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<!--
+	1. 模拟radio标签需要给每个checkbox定义一个id，绑定label.
+	怎么动态定义？
+	2. 在微信小程序中radio需要radio-group包裹着，没有的话会影响performance，解析微信小程序代码时需要注意。
+	3. radio与checkbox不同点在于选中一个标签后会覆盖前一个，我们把同一组的radio的name都设置成一样的就可以了（具体原理不详）
+-->
+
+<body>
+	<div class="panel">
+		<div class="radio">
+			<input type="radio" id="radio-1" name="radio" style="display: none;">
+			<label for="radio-1" class="radio-like">✔</label>
+			<span>标签一</span>
+		</div>
+		<div class="radio">
+			<input type="radio" id="radio-2" name="radio" style="display: none;">
+			<label for="radio-2" class="radio-like">✔</label>
+			<span>标签二</span>
+		</div>
+		<div class="radio">
+			<input type="radio" id="radio-3" name="radio" style="display: none;">
+			<label for="radio-3" class="radio-like">✔</label>
+			<span>标签三</span>
+		</div>
+	</div>
+</body>
+</html>
