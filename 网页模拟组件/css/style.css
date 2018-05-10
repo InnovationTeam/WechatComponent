@@ -113,24 +113,28 @@
 	display: inline-block;
 }
 
-.icon-like-common{
+.icon-like{
 	display: inline-block;
 	cursor: pointer;
 	vertical-align: middle;
-	/* 这四个属性相关的，同时相应改变 */
-	width:22px;
-	height: 22px;
-	font-size: 14px;
-	border-radius: 15px;
+}
+
+
+.icon-size-common{
+	width:40px;
+	height: 40px;
+	font-size: 28px;
+	border-radius: 40px;
 	border: 0.5px solid;
 }
 
-.icon-like-special{
-	display: inline-block;
-	cursor: pointer;
-	vertical-align: middle;
-	/*响应尺寸改变*/
+.icon-size-special{
 	font-size: 23px;
+}
+
+.icon-attr-color{
+	background-color: aqua !important;
+	border-color: aqua !important;
 }
 
 
@@ -185,6 +189,8 @@
 	border-color: #B2B2B2;
 	color: #ffffff;
 }
+
+
 
 
 

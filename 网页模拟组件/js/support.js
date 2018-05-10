@@ -31,43 +31,7 @@ $.fn.RangeSlider = function(cfg){
 };
 
 
-/*
-	button：实现loading属性
-*/
-import {Spinner} from 'spin.js';
 
-function showSpin(){
-	var spinnerOpts = {
-			lines: 11 // 共有几条线组成
-			, length: 13 // 每条线的长度
-			, width: 8 // 每条线的长度
-			, radius: 19 // 内圈的大小
-			, scale: 0.5 // Scales overall size of the spinner
-			, corners: 0.1 // 圆角的程度
-			, color: '#000' // #rgb or #rrggbb or array of colors
-			, opacity: 0.1 // Opacity of the lines
-			, rotate: 18 // 整体的角度（因为是个环形的，所以角度变不变其实都差不多）
-			, direction: 1 // 1: clockwise, -1: counterclockwise
-			, speed: 0.8 // 速度：每秒的圈数
-			, trail: 55 //  高亮尾巴的长度
-			, fps: 20 // Frames per second when using setTimeout() as a fallback for CSS
-			, zIndex: 2e9 // z-index的值 2e9（默认为2000000000
-			, className: 'spinner' // The CSS class to assign to the spinner
-			, top: '50%' // Top position relative to parent
-			, left: '50%' // Left position relative to parent
-			, shadow: false // 是否要阴影
-			, hwaccel: false // 是否用硬件加速
-			, position: 'absolute' // Element positioning
-	};
-	var spinTarget = $('.panel');
-	new Spinner(spinnerOpts).spin(spinTarget);
-}
-
-
-$(function(){
-	showSpin();
-	
-});
 
 
 

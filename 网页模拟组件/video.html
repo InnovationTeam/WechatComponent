@@ -1,17 +1,38 @@
 <!doctype html>
+
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>video</title>
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
+	<head>
+		<link href="css/video-js.css" rel="stylesheet">
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="js/video.js"></script>
+	</head>
+
 	<body>
-		<div class="panel">
-			<div class="video">
-				<video></video>
-			</div>
-			
-		
+  		<div class="panel">
+  			<div class="video">
+  				<video id="wx-video" class="video-js  vjs-big-play-centered" controls preload="auto" poster>
+					<source src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" type='video/mp4'>
+	 			</video>
+  			</div>
 		</div>
+  
 	</body>
+
 </html>
+
+
+<script>
+	videojs("#wx-video",{
+		controlBar: {
+			volumePanel: false,
+		}	
+	},function(){
+		//增加“弹幕”按钮
+		var newbtn = document.createElement('btn');
+		newbtn.innerHTML = '<button class="vjs-control" style="color:#1AAD19;border:1px solid #1AAD19;" id="danmuButton">弹幕</button>';
+		var controlBar = document.getElementsByClassName('vjs-control-bar')[0];
+		insertBeforeNode = document.getElementsByClassName('vjs-fullscreen-control')[0];
+		controlBar.insertBefore(newbtn,insertBeforeNode);
+	})
+</script>
+
