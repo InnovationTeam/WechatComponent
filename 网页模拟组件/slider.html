@@ -9,18 +9,18 @@
 </head>
 
 <body>
-	
+	<div class="panel">
 		<div class="slider">
 			<input type="range" value="0">
 		</div>
 	</div>
 	<script>
-            var change = function($input) {
-                /*内容可自行定义*/
-                console.log($input.value);
-            }
+		var change = function($input) {
+			/*内容可自行定义*/
+			console.log($input.value);
+		}
 
-            $('input').RangeSlider({ min: 0,   max: 100,  step: 1,  callback: change});
+		$('input').RangeSlider({ min: 0,   max: 100,  step: 1,  callback: change});
 
      </script>
 
