@@ -129,11 +129,11 @@
 }
 
 .icon-size-special{
-	font-size: 23px;
+	font-size: 40px;
 }
 
 .icon-attr-color{
-	background-color: aqua !important;
+	background-color: red !important;
 	border-color: aqua !important;
 }
 

@@ -6,6 +6,47 @@
 <link rel="stylesheet" href="./css/style.css">
 </head>
 
+<!--
+icon封装了微信icon的type,size和color属性，其中size和color需要动态渲染
+注意：
+	封装时下面的icon-size-common，icon-size-special和icon-attr-color的内容（需要直接写在style里。
+	其对应关系为：
+		size-common: width=height=border-radius = "size"值， font-size的值为：16/23*"size"值
+		size-special: font-size = "size"值
+		color-common: background-color=border-color="color"值
+		color-special: color="color"值
+		
+		另：与special相关的icon只有最后的两个，其他都是与common相关
+	
+	
+
+***css在下面，方便查看***	
+	
+.icon-size-common{
+	width:40px;
+	height: 40px;
+	font-size: 28px;
+	border-radius: 40px;
+	border: 0.5px solid;
+}
+
+.icon-size-special{
+	font-size: 40px;
+}
+
+.icon-color-common{
+	background-color: red !important;
+	border-color: red !important;
+}
+
+.icon-color-special{
+	color: red !important;
+}
+	
+
+-->
+
+
 
 <body>
 	<div class="panel">
@@ -18,7 +59,7 @@
 		下面还没外层封装div.
 		-->
 
-		<div class="icon-like icon-type-info icon-size-common icon-attr-color">
+		<div class="icon-like icon-type-info icon-size-common">
 			<span>i</span>
 		</div>
 		
@@ -42,7 +83,7 @@
 			<span>✖</span>
 		</div>
 		
-		<div class="icon-like icon-type-success_no_circle icon-size-special">
+		<div class="icon-like icon-type-success_no_circle icon-size-special" style="color: red !important;">
 			<span>✔</span>
 		</div>
 		
